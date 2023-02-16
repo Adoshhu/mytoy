@@ -1,5 +1,5 @@
 databases:
-  name: mysql
+  name: mysql2
   ipAllowList: []
 
 services:
@@ -13,7 +13,7 @@ services:
         sync: false
       - key: DATABASE_URL
         fromDatabase:
-          name: mysql
+          name: mysql2
           property: connectionString
   - type: redis
     name: redis
