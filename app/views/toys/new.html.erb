@@ -1,0 +1,26 @@
+<h2>New Toys</h2>
+</br>
+<%= form_with model: @toy, local: true do |form| %>
+
+    <div class='field form-group'>
+        <%= form.label :toyname %>
+        <%= form.text_field :toyname, class:'form-control' %>
+    </div>
+    
+    <div class='field form-group'>
+        <%= form.label :content %>
+        <%= form.text_field :content, class:'form-control' %>
+    </div>
+
+    <div class='field form-group'>
+        <%= form.label :price %>
+        <%= form.text_field :price, class: 'form-control' %>
+    </div>
+
+    <%= form.hidden_field :user_id, value: current_user.id %>    
+    <%= form.submit class: 'btn btn-secondary' %>
+    
+
+<% end %>
+
+
