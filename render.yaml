@@ -1,8 +1,7 @@
 databases:
-  name: mysql 
-  plan: mysql
-  ipAllowList: []
-
+  - name: mysql 
+    ipAllowList: []
+    
 services:
   - type: web
     name: rails
